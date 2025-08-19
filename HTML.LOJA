@@ -1,0 +1,387 @@
+`index.html`
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fernanda Fogaça Makes - Loja de Maquiagem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom fonts and styles for feminine, elegant look */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: #fff0f6;
+      color: #4b0b26;
+    }
+
+    h1,
+    h2,
+    .logo-text {
+      font-family: "Great Vibes", cursive;
+      color: #be185d;
+      text-shadow: 0 1px 3px rgba(255, 182, 193, 0.6);
+    }
+
+    .btn-primary {
+      background: #be185d;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e11d48;
+    }
+
+    /* Product card shadow and hover effect */
+    .product-card {
+      box-shadow: 0 4px 8px rgba(190, 24, 93, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(190, 24, 93, 0.5);
+    }
+
+    /* Scrollbar for product horizontal scroll */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- HEADER with Logo and Store Name -->
+  <header class="bg-pink-50 border-b border-pink-200 sticky top-0 z-30">
+    <div class="container mx-auto flex items-center justify-between py-6 px-4 md:px-0">
+      <div class="flex items-center space-x-4">
+        <img src="https://placehold.co/80x80/png?text=Butterfly+Logo&font=GreatVibes&color=be185d&bg=fff0f6"
+          alt="Logo estilizado da Fernanda Fogaça com uma borboleta rosa delicada sobre fundo branco acinzentado, no estilo elegante e feminino"
+          class="rounded-full border-2 border-pink-300" />
+        <h1 class="logo-text text-4xl font-bold">Fernanda Fogaça Makes</h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-8 text-pink-600 font-semibold">
+          <li><a href="#produtos" class="hover:underline focus:underline">Produtos</a></li>
+          <li><a href="#sobre" class="hover:underline focus:underline">Sobre</a></li>
+          <li><a href="#contato" class="hover:underline focus:underline">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <section class="bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 text-center py-16 px-6 md:px-0">
+    <h2 class="text-5xl md:text-6xl font-bold mb-4">Maquiagem & Cuidados com Amor</h2>
+    <p class="text-lg md:text-xl max-w-xl mx-auto mb-6 text-pink-800 shadow-sm">Produtos selecionados com carinho para
+      realçar sua beleza natural. <br />Seja a sua melhor versão com Fernanda Fogaça Makes.</p>
+    <a href="#produtos"
+      class="btn-primary inline-block px-8 py-3 text-white font-bold text-lg rounded-full shadow-md focus:outline-none focus:ring focus:ring-pink-400">Confira
+      nossos produtos</a>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="produtos" class="container mx-auto px-4 md:px-0 mt-16 mb-24">
+    <h2 class="text-4xl font-bold mb-12 text-center text-pink-700">Nossos Produtos Destaques</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://placehold.co/480x480/png?text=M%C3%A1scara+Dan%C3%A7as+Vorazes+Lola&font=Montserrat&color=be185d&bg=ffe4f1"
+          alt="Pote da máscara Lola Cosmetics Danças Vorazes para recuperação intensa do cabelo com embalagem amarela,
+            azul e ilustração feminina, sobre fundo rosa pastel - cosmético vegano" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Máscara Danças Vorazes</h3>
+        <p class="text-pink-600 flex-grow">Máscara reparadora intensa para cabelos danificados. Hidratação profunda e
+          vitalidade.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 49,90</p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://placehold.co/480x480/png?text=M%C3%A1scara+Densidade+Lola&font=Montserrat&color=be185d&bg=f9d5e5"
+          alt="Pote da máscara capilar Lola Cosmetics Densidade para cabelos finos e com queda, embalagem rosa e verde
+            com detalhes em azul, sobre fundo rosa pastel - cosmético vegano" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Máscara Densidade</h3>
+        <p class="text-pink-600 flex-grow">Fortalece cabelos finos e com queda com ingredientes nutritivos como baicapil
+          e niacinamida.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 39,90</p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://placehold.co/480x480/png?text=M%C3%A1scara+Rapunzel+Lola&font=Montserrat&color=be185d&bg=ffd6e8"
+          alt="Pote da máscara Lola Cosmetics Rapunzel fortalecedora para crescimento e fortalecimento do cabelo,
+            embalagem vermelha com detalhes em azul e verde, fundo rosa pastel - cosmético vegano" class="rounded-lg mb-5"
+          loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Máscara Fortificante Rapunzel</h3>
+        <p class="text-pink-600 flex-grow">Estimula crescimento e fortalece os fios com ativos naturais e extrato de
+          jabuticaba.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 54,90</p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://placehold.co/480x480/png?text=Bruma+Iluminadora+Gold+Phallebeauty&font=Montserrat&color=be185d&bg=fce4ec"
+          alt="Frasco da bruma iluminadora Gold da Phallebeauty com embalagem branca e rosa, sobre superfície branca e
+            fundo rosa - produto de maquiagem iluminador e hidratante" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Bruma Iluminadora Gold</h3>
+        <p class="text-pink-600 flex-grow">Ilumina, hidrata e tonifica a pele com toque leve e radiante. Refresca a
+          maquiagem.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 14,00 <span class="text-sm line-through text-pink-400">R$ 18,90</span></p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://placehold.co/480x480/png?text=Bruma+Matte+Phallebeauty&font=Montserrat&color=be185d&bg=fadadd"
+          alt="Frasco da bruma facial Matte da Phallebeauty com embalagem preta, sobre superfície branca e fundo rosa
+            pastel - maquiagem que fixa, hidrata e tonifica" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Bruma Matte Fixadora</h3>
+        <p class="text-pink-600 flex-grow">Fixa a maquiagem com efeito matte, hidrata e tonifica para acabamento duradouro
+        </p>
+        <p class="mt-4 font-bold text-pink-700">R$ 14,00 <span class="text-sm line-through text-pink-400">R$ 18,90</span></p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="sobre" class="bg-pink-50 py-16 px-6 md:px-0">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-bold mb-8 text-pink-700">Sobre a Loja</h2>
+      <img src="https://placehold.co/150x150/png?text=Logo+Fernanda+Foga%C3%A7a+lilac-pink+butterfly&font=GreatVibes&color=be185d&bg=fff0f6"
+        alt="Logo da loja Fernanda Fogaça Makes escrito em letra cursiva elegante com uma borboleta rosa no centro"
+        class="mx-auto rounded-full mb-8" />
+      <p class="mb-6 text-lg text-pink-800">Fernanda Fogaça é a idealizadora e dona da loja, que desde 2023 se dedica a
+        trazer produtos de beleza que encantam e cuidam do seu visual. Aqui, a paixão pela maquiagem se une à busca por
+        qualidade e atenção personalizada para cada cliente.</p>
+      <p class="text-pink-700 font-semibold text-lg">Horário de funcionamento da loja:</p>
+      <p class="text-pink-600 font-medium text-md">Terça-feira: 9h às 18:30h | Sábado: 9h às 15h</p>
+    </div>
+  </section>
+
+  <!-- CONTACT/FOOTER SECTION -->
+  <footer id="contato" class="bg-pink-100 py-8 mt-auto border-t border-pink-300">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Entre em Contato</h3>
+      <p class="mb-3 text-pink-800">Quer saber mais ou fazer seu pedido? Entre em contato conosco!</p>
+      <p class="text-pink-600">WhatsApp: <a href="https://wa.me/5511999999999"
+          class="underline hover:text-pink-800">+55 11 99999-9999</a></p>
+      <p class="mt-6 text-sm text-pink-600">© 2023 Fernanda Fogaça Makes. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+```
+
+🎨 **Generating images based on descriptions...**
+
+✅ **Images generated successfully! Here's your updated content:**
+
+`index.html`
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fernanda Fogaça Makes - Loja de Maquiagem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom fonts and styles for feminine, elegant look */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: #fff0f6;
+      color: #4b0b26;
+    }
+
+    h1,
+    h2,
+    .logo-text {
+      font-family: "Great Vibes", cursive;
+      color: #be185d;
+      text-shadow: 0 1px 3px rgba(255, 182, 193, 0.6);
+    }
+
+    .btn-primary {
+      background: #be185d;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e11d48;
+    }
+
+    /* Product card shadow and hover effect */
+    .product-card {
+      box-shadow: 0 4px 8px rgba(190, 24, 93, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(190, 24, 93, 0.5);
+    }
+
+    /* Scrollbar for product horizontal scroll */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- HEADER with Logo and Store Name -->
+  <header class="bg-pink-50 border-b border-pink-200 sticky top-0 z-30">
+    <div class="container mx-auto flex items-center justify-between py-6 px-4 md:px-0">
+      <div class="flex items-center space-x-4">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f6e57aaf-e0f7-4091-b1b2-8f4a192cb860.png"
+          alt="Logo estilizado da Fernanda Fogaça com uma borboleta rosa delicada sobre fundo branco acinzentado, no estilo elegante e feminino"
+          class="rounded-full border-2 border-pink-300" />
+        <h1 class="logo-text text-4xl font-bold">Fernanda Fogaça Makes</h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-8 text-pink-600 font-semibold">
+          <li><a href="#produtos" class="hover:underline focus:underline">Produtos</a></li>
+          <li><a href="#sobre" class="hover:underline focus:underline">Sobre</a></li>
+          <li><a href="#contato" class="hover:underline focus:underline">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <section class="bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 text-center py-16 px-6 md:px-0">
+    <h2 class="text-5xl md:text-6xl font-bold mb-4">Maquiagem & Cuidados com Amor</h2>
+    <p class="text-lg md:text-xl max-w-xl mx-auto mb-6 text-pink-800 shadow-sm">Produtos selecionados com carinho para
+      realçar sua beleza natural. <br />Seja a sua melhor versão com Fernanda Fogaça Makes.</p>
+    <a href="#produtos"
+      class="btn-primary inline-block px-8 py-3 text-white font-bold text-lg rounded-full shadow-md focus:outline-none focus:ring focus:ring-pink-400">Confira
+      nossos produtos</a>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="produtos" class="container mx-auto px-4 md:px-0 mt-16 mb-24">
+    <h2 class="text-4xl font-bold mb-12 text-center text-pink-700">Nossos Produtos Destaques</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/375ce942-0779-4667-a2d8-6a69c4970310.png"
+          alt="Pote da máscara Lola Cosmetics Danças Vorazes para recuperação intensa do cabelo com embalagem amarela,
+            azul e ilustração feminina, sobre fundo rosa pastel - cosmético vegano" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Máscara Danças Vorazes</h3>
+        <p class="text-pink-600 flex-grow">Máscara reparadora intensa para cabelos danificados. Hidratação profunda e
+          vitalidade.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 49,90</p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0763f5ae-22ad-40d4-bd25-021bf17deb7f.png"
+          alt="Pote da máscara capilar Lola Cosmetics Densidade para cabelos finos e com queda, embalagem rosa e verde
+            com detalhes em azul, sobre fundo rosa pastel - cosmético vegano" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Máscara Densidade</h3>
+        <p class="text-pink-600 flex-grow">Fortalece cabelos finos e com queda com ingredientes nutritivos como baicapil
+          e niacinamida.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 39,90</p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2357d582-406d-43e9-8656-9da6716669c6.png"
+          alt="Pote da máscara Lola Cosmetics Rapunzel fortalecedora para crescimento e fortalecimento do cabelo,
+            embalagem vermelha com detalhes em azul e verde, fundo rosa pastel - cosmético vegano" class="rounded-lg mb-5"
+          loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Máscara Fortificante Rapunzel</h3>
+        <p class="text-pink-600 flex-grow">Estimula crescimento e fortalece os fios com ativos naturais e extrato de
+          jabuticaba.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 54,90</p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81bc23ab-0689-4d68-8405-58beac9b8ef4.png"
+          alt="Frasco da bruma iluminadora Gold da Phallebeauty com embalagem branca e rosa, sobre superfície branca e
+            fundo rosa - produto de maquiagem iluminador e hidratante" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Bruma Iluminadora Gold</h3>
+        <p class="text-pink-600 flex-grow">Ilumina, hidrata e tonifica a pele com toque leve e radiante. Refresca a
+          maquiagem.</p>
+        <p class="mt-4 font-bold text-pink-700">R$ 14,00 <span class="text-sm line-through text-pink-400">R$ 18,90</span></p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+
+      <article class="product-card bg-white rounded-xl p-5 flex flex-col shadow-lg">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e8c4f296-64fe-4e96-8f96-9e2e21b8a41d.png"
+          alt="Frasco da bruma facial Matte da Phallebeauty com embalagem preta, sobre superfície branca e fundo rosa
+            pastel - maquiagem que fixa, hidrata e tonifica" class="rounded-lg mb-5" loading="lazy" />
+        <h3 class="text-2xl font-semibold mb-2">Bruma Matte Fixadora</h3>
+        <p class="text-pink-600 flex-grow">Fixa a maquiagem com efeito matte, hidrata e tonifica para acabamento duradouro
+        </p>
+        <p class="mt-4 font-bold text-pink-700">R$ 14,00 <span class="text-sm line-through text-pink-400">R$ 18,90</span></p>
+        <button
+          class="btn-primary mt-5 py-2 rounded-full text-white font-semibold hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Comprar</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="sobre" class="bg-pink-50 py-16 px-6 md:px-0">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-bold mb-8 text-pink-700">Sobre a Loja</h2>
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e4ac3249-7ac5-4be4-b99d-e3e5fb833b69.png"
+        alt="Logo da loja Fernanda Fogaça Makes escrito em letra cursiva elegante com uma borboleta rosa no centro"
+        class="mx-auto rounded-full mb-8" />
+      <p class="mb-6 text-lg text-pink-800">Fernanda Fogaça é a idealizadora e dona da loja, que desde 2023 se dedica a
+        trazer produtos de beleza que encantam e cuidam do seu visual. Aqui, a paixão pela maquiagem se une à busca por
+        qualidade e atenção personalizada para cada cliente.</p>
+      <p class="text-pink-700 font-semibold text-lg">Horário de funcionamento da loja:</p>
+      <p class="text-pink-600 font-medium text-md">Terça-feira: 9h às 18:30h | Sábado: 9h às 15h</p>
+    </div>
+  </section>
+
+  <!-- CONTACT/FOOTER SECTION -->
+  <footer id="contato" class="bg-pink-100 py-8 mt-auto border-t border-pink-300">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Entre em Contato</h3>
+      <p class="mb-3 text-pink-800">Quer saber mais ou fazer seu pedido? Entre em contato conosco!</p>
+      <p class="text-pink-600">WhatsApp: <a href="https://wa.me/5511999999999"
+          class="underline hover:text-pink-800">+55 11 99999-9999</a></p>
+      <p class="mt-6 text-sm text-pink-600">© 2023 Fernanda Fogaça Makes. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+```
